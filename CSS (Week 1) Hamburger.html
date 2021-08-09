@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    function myFunction(x) {
+  x.classList.toggle("change");
+  
+}
+</script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: #3FAF82;
+        }
+        .wrapper{
+            display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20%;
+    cursor: pointer;
+        }
+
+        .line{
+            width: 62px;
+    height: 6px;
+    background-color:white;
+    margin: 6px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 15px;
+        }
+        /* Rotate first bar */
+.change #n1 {
+  -webkit-transform: rotate(-45deg) ;
+  transform: rotate(-45deg) translate(-13px, 3px);
+}
+/* Fade out the second bar */
+.change #n2 {
+  opacity: 0;
+
+}
+
+/* Rotate last bar */
+.change #n3 {
+  -webkit-transform: rotate(45deg)  ;
+  transform: rotate(45deg) translate(-20px, -14px) ;
+}
+
+    </style>
+    <div class="wrapper" onclick="myFunction(this)">
+        
+        <div id="n1" class="line">
+            
+        </div>
+    
+        <div id="n2" class="line">
+    
+        </div>
+    
+        <div id="n3" class="line">
+    
+        </div>
+    </div>
+   
+</body>
+</html>
